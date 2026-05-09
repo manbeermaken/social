@@ -30,7 +30,7 @@ jobs:
         run: npm run build
 
       - name: Create Tar folder
-        run: tar -cJf social-release.tar.xz -C dist .
+        run: tar -cJf social.tar.xz --transform 's,^,social/,' dist/ package.json package-lock.json
 
       - name: Release
         uses: softprops/action-gh-release@v3
