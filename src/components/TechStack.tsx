@@ -58,13 +58,14 @@ const TechStack = () => {
               displayedIcons.map((icon) => {
                 const Icon = icon.Component
                 return (
-                  <div key={icon.id} className="relative group cursor-pointer">
+                  <div key={icon.id} className="relative group cursor-pointer h-16 w-16">
                     <Icon size="64" />
                     {/* <Icon size="64" className="transition-all duration-300 group-hover:drop-shadow-xl"/> */}
                     {/* <Icon
                       size={64}
                       className="text-gray-400 transition-all duration-300 group-hover:text-emerald-400 group-hover:drop-shadow-[0_0_12px_rgba(52,211,153,0.8)]"
                     /> */}
+                    {/* whitespace-nowrap */}
                     <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2  
                     px-2 py-1 rounded-xl pointer-events-none bg-gray-500 opacity-0 group-hover:opacity-100">
                       {icon.name}

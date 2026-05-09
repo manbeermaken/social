@@ -1,14 +1,20 @@
 @import "tailwindcss";
 
-.animate-neon {
-  animation: neon-breathe 2s ease-in-out infinite alternate;
+@theme {
+    --animate-border-spin: spin 3s linear infinite;
+
+    @keyframes border-spin {
+        100% {
+            transform: rotate(-360deg),
+        }
+    }
+
 }
 
-@keyframes neon-breathe {
-  from {
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-  }
-  to {
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
-  }
+@layer utilities {
+    .glowing-border::before {
+        content: '';
+        background-image: conic-gradient(transparent 70%, rgb(2, 208, 2));
+        @apply top-1/2 left-1/2 -z-1 absolute -translate-x-1/2 -translate-y-1/2  w-[150%] aspect-square;
+    }
 }

@@ -52,15 +52,19 @@ const Hero = () => {
                 <div className='flex flex-col gap-8'>
                     <h1 id='hero-heading' className='text-7xl font-bold'>Social</h1>
                     <p id='hero-para' className='text-xl'>A scalable, high-performance social feed featuring<br /> real-time AI content moderation, custom JWT,<br /> authentication, and seamless infinite scrolling.</p>
-                    <div className='flex gap-4 text-2xl mx-2'>
+                    <div className='flex gap-4 text-2xl mx-2 items-center'>
                         <div className='hero-button-wrapper flex-1'>
-                            <a className='block py-4 font-bold rounded-2xl text-center 
-                            bg-[hsl(210,17%,98%)] text-black hover:bg-[hsl(210,17%,80%)] active:scale-95 transition-all duration-150 ease-out' 
-                                href="https://social.manbeermaken.xyz" target='_blank'>Live Demo</a>
+                            <div className='relative rounded-2xl glowing-border p-1.5 overflow-hidden
+                            before:animate-border-spin'>
+                                <a className='block py-4 font-bold rounded-xl text-center 
+                                            bg-[hsl(210,17%,98%)] text-black 
+                                            hover:bg-[hsl(210,17%,80%)] active:scale-95 transition-all duration-150 ease-out'
+                                    href="https://social.manbeermaken.xyz" target='_blank'>Live Demo</a>
+                            </div>
                         </div>
                         <div className='hero-button-wrapper flex-1'>
                             <a className='block py-4 font-bold rounded-2xl text-center 
-                             bg-[hsl(210,17%,98%)] text-black hover:bg-[hsl(210,17%,80%)] active:scale-95 transition-all duration-150 ease-out' 
+                             bg-[hsl(210,17%,98%)] text-black hover:bg-[hsl(210,17%,80%)] active:scale-95 transition-all duration-150 ease-out'
                                 href="https://github.com/manbeermaken/social-spring" target='_blank'>Github</a>
 
                         </div>
