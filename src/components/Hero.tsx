@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react"
 import { useRef } from 'react'
 import Navbar from './Navbar'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
+import CanvasGrid from './hero/CanvasGrid'
 
 gsap.registerPlugin(useGSAP, SplitText, ScrollToPlugin)
 
@@ -46,15 +47,16 @@ const Hero = () => {
     })
 
     return (
-        <div ref={heroRef} id='#hero' className='max-w-7xl mx-auto min-h-screen flex flex-col'>
+        <div ref={heroRef} id='#hero' className='relative mx-auto min-h-screen flex flex-col'>
+            <CanvasGrid />
             <Navbar />
-            <div className='flex flex-col justify-center items-center flex-1'>
-                <div className='flex flex-col gap-8'>
+            <div className='relative mx-auto flex flex-col justify-center items-center flex-1'>
+                <div className='absolute min-w-xl flex flex-col gap-8'>
                     <h1 id='hero-heading' className='text-7xl font-bold'>Social</h1>
                     <p id='hero-para' className='text-xl'>A scalable, high-performance social feed featuring<br /> real-time AI content moderation, custom JWT,<br /> authentication, and seamless infinite scrolling.</p>
                     <div className='flex gap-4 text-2xl mx-2 items-center'>
                         <div className='hero-button-wrapper flex-1'>
-                            <div className='relative rounded-2xl glowing-border p-1.5 overflow-hidden
+                            <div className='relative rounded-2xl glowing-border p-1 overflow-hidden
                             before:animate-border-spin'>
                                 <a className='block py-4 font-bold rounded-xl text-center 
                                             bg-[hsl(210,17%,98%)] text-black 
@@ -71,7 +73,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div onClick={handleArrowClick} className='cursor-pointer w-fit mx-auto flex flex-col items-center -space-y-3'>
+            <div onClick={handleArrowClick} className='relative cursor-pointer w-fit mx-auto flex flex-col items-center -space-y-3'>
                 <ChevronDownIcon className='scroll-arrow text-white h-6 opacity-0' />
                 <ChevronDownIcon className='scroll-arrow text-white h-6 opacity-0' />
                 {/* <ChevronDownIcon className='scroll-arrow text-white h-5 opacity-0' /> */}

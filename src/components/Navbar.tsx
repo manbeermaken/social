@@ -22,15 +22,15 @@ const Navbar = () => {
     })
 
     return (
-        <nav className="w-[60%] self-center">
+        <nav className="w-[60%] self-center relative">
             <ul className="flex justify-between text-xl font-semibold">
                 <li className="mt-5">
                     <a onClick={handleNavClick} href="#tech-stack" className="relative group">
                         <span className='inline-block group-hover:scale-105 transition-transform duration-300 ease-out'>
                             TECH STACK
                         </span>
-                        <span className="h-0.5 bg-white w-full absolute -bottom-1.5 left-0 scale-x-0 
-                        group-hover:scale-x-100 origin-center transition-transform duration-300 ease-out"></span>
+                        <span className="h-1 rounded-xl bg-primary w-full absolute -bottom-1.5 left-0 scale-x-0 
+                        group-hover:scale-x-105 origin-center transition-transform duration-300 ease-out"></span>
                     </a>
                 </li>
                 <li className="mt-5">
@@ -38,8 +38,8 @@ const Navbar = () => {
                         <span className='inline-block group-hover:scale-105 transition-transform duration-300 ease-out'>
                             FEATURES
                         </span>
-                        <span className="h-0.5 bg-white w-full absolute -bottom-1.5 left-0 scale-x-0 
-                        group-hover:scale-x-100 origin-center transition-transform duration-300 ease-out"></span>
+                        <span className="h-1 rounded-xl bg-primary w-full absolute -bottom-1.5 left-0 scale-x-0 
+                        group-hover:scale-x-105 origin-center transition-transform duration-300 ease-out"></span>
                     </a>
                 </li>
                 <li className="mt-5">
@@ -47,8 +47,8 @@ const Navbar = () => {
                         <span className='inline-block group-hover:scale-105 transition-transform duration-300 ease-out'>
                             API FLOWS
                         </span>
-                        <span className="h-0.5 bg-white w-full absolute -bottom-1.5 left-0 scale-x-0 
-                        group-hover:scale-x-100 origin-center transition-transform duration-300 ease-out"></span>
+                        <span className="h-1 rounded-xl bg-primary w-full absolute -bottom-1.5 left-0 scale-x-0 
+                        group-hover:scale-x-105 origin-center transition-transform duration-300 ease-out"></span>
                     </a>
                 </li>
             </ul>
